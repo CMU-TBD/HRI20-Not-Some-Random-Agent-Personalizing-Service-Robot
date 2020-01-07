@@ -1,4 +1,12 @@
-# Wizard of Oz Text-to-Speech Interface
+# HRI20-Not-Some-Random-Agent-Personalizing-Service-Robot
+
+This repository contains the following elements related to the user enactments study described in the HRI 2020 paper: "Not Some Random Agent: Multi-person Interaction with a Personalizing Service Robot":
+
+1. Example scripts for user enactment
+2. Code to run the wizarding interface, which allows for creating audio files for the agents' utterances from the set of scripts and new utterances
+3. Keynote files with the utterances from the sample scripts 
+4. The interview protocol
+
 
 _How we created audio files of different agents' lines from prewritten scenario scripts for study on interactions between multiple co-embodied agents and users in services settings._
 
