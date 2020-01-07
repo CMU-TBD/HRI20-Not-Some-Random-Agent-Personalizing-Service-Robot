@@ -9,6 +9,8 @@ This repository contains the following elements related to the user enactments s
 
 The voices used in the study are from Google Cloud Services. You must have Google Cloud credentials to use them. 
 
+Acknowledgments: This work was supported by the National Science Foundation under grant NSF-1734456 and NASA under grant 80NSSC19K1133.  
+
 ### User enactments wizard interface
 
 _How we created audio files of different agents' lines from prewritten scenario scripts for study on interactions between multiple co-embodied agents and users in services settings._
