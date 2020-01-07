@@ -1,12 +1,15 @@
 # HRI20-Not-Some-Random-Agent-Personalizing-Service-Robot
 
+COPYRIGHT(C) 2020 - Carnegie Mellon University - Code released under MIT. Contact: Sam - sreig@cs.cmu.edu 
+
 This repository contains the following elements related to the user enactments study described in the HRI 2020 paper: "Not Some Random Agent: Multi-person Interaction with a Personalizing Service Robot":
 
-1. Example scripts for user enactment
-2. Code to run the wizarding interface, which allows for creating audio files for the agents' utterances from the set of scripts and new utterances
-3. Keynote files with the utterances from the sample scripts 
-4. The interview protocol
+1. Code to run the wizarding interface, which allows for generating audio files for the agents' utterances from a set of scripts and for creating new utterances
+2. The interview protocol
 
+The voices used in the study are from Google Cloud Services. You must have Google Cloud credentials to use them. 
+
+### User enactments wizard interface
 
 _How we created audio files of different agents' lines from prewritten scenario scripts for study on interactions between multiple co-embodied agents and users in services settings._
 
@@ -22,10 +25,11 @@ Initial setup:
 1. Download project.
 2. Set up a [Python development environment](https://cloud.google.com/python/setup).
 3. Install necessary packages: tkinter, pyglet, google.cloud, playsound, docx2txt, os.
-4. Download "scripts" folder with three subfolders (clinic, store, hotel) from Google Drive and add to enactments_wizard_interface folder.<br />
+4. Create the scripts for each environment (clinic, store, hotel) folder. Add them to a folder called "scripts", with subfolders for each environment (clinic, store, hotel). The robot's dialogue in the scripts must be formatted like this:<br />
     Robot line in script format: 
     > Robot (AGENT_NAME): This is what the robot says.
 <br />
+This specific format is used by texttospeechwizard.py to parse the script for lines of robot dialogue audio from which to create audio files.
 
 Before running _texttospeechwizard.py_ or _interface.py_:
 1. Open new Terminal window.
@@ -44,7 +48,7 @@ To create audio files from prewritten scripts:
     ```
     python3 texttospeechwizard.py PARTICIPANT_1 PARTICIPANT_2 "context_letter + config_num" "context_letter + config_num" ...
     ```
-    For example, to create all audio files for clinic - singular agent, store - personal service agent, hotel - my agent:<br />
+    The numbers for config_num are: 1 for singular agent, 2 for personal service agent, 3 for life agent. For example, to create all audio files for participants Alex and Taylor, for session order clinic - singular agent, store - personal service agent, hotel - life agent:<br />
     ```
     python3 texttospeechwizard.py Alex Taylor c1 s2 h3
     ```
@@ -63,7 +67,11 @@ To create one audio file at a time:
 Agent voices:
 * Alpha (Singular Agent)
 * Moon and Saturn (Personal Service Agent)
-* Basil and Sunflower (My Agent)
+* Basil and Sunflower (Life Agent)
 
 [Google WaveNet voices](https://cloud.google.com/text-to-speech/docs/voices) can be changed in _texttospeechwizard.py_
 
+
+### Interview protocol
+
+The semi-structured interview questions are in a pdf file in this repository. 
